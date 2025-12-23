@@ -1,0 +1,665 @@
+/* ======================================
+   1) 300px – 767.99px
+====================================== */
+@media (min-width: 300px) and (max-width: 767.99px) {
+:root{
+  /* Font Sizes */
+  --size10: 10px;
+  --size12: 12px;
+  --size14: 14px;
+  --size16: 16px;
+  --size18: 18px;
+  --size20: 16px;
+  --size22: 22px;
+  --size24: 18px;
+  --size28: 28px;
+  --size32: 32px;
+  --size42: 40px;
+  --size50: 50px;
+  --size52: 52px;
+  --size58: 40px;
+
+    /* Font Weights */
+  --fw300: 300;
+  --fw400: 400;
+  --fw500: 400;
+  --fw600: 500;
+  --fw700: 500;
+  --fw900: 700;
+}
+
+         html{
+        overflow-x: hidden;
+    }
+    body{
+        overflow-x: hidden;
+    }
+    .copyright_text {
+	padding-top: 99px;
+}
+  #hero_section {
+    position: relative;
+	background-image: url(../img/hero_bg.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.hero_bg  {
+	display: none;
+}
+.section_title h3 {
+	margin-top: 15px;
+}
+#statisticsSection {
+	padding-left: 0;
+	padding-right: 0;
+}
+.logo-slider {
+	gap: 30px;
+}
+.hero_mobile_over{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #00000063;
+    display: block;
+    height: 100%;
+    z-index: 1;
+}
+#hero_section .hero_content {
+	position: relative;
+	z-index: 11;
+	margin-left: 0px;
+	margin-top: 350px;
+}
+#about_us_section {
+	padding-top: 99px;
+	padding-bottom: 70px;
+	background-color: var(--white);
+}
+
+.section_title {
+	padding-left: 0px;
+}
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+	width: 100%;
+	padding-right: var(--bs-gutter-x,.75rem) !important;
+	padding-left: var(--bs-gutter-x,.75rem) !important;
+	margin-right: auto;
+	margin-left: auto;
+}
+#hero_section .hero_content h1 {
+	width: 90%;
+	font-size: 34px;
+}
+#hero_section .hero_content p {
+	margin-top: 0px;
+	font-size: 20px;
+}
+.statistics_item{
+    margin-bottom: 20px;
+}
+.featured_area {
+	display: grid;
+	gap: 40px;
+	overflow-x: auto;
+	overflow-y: auto;
+	width: auto;
+	scrollbar-width: auto;
+	justify-content: start;
+}
+.featured_area {
+	padding-bottom: 30px;
+	margin-bottom: 80px;
+}
+.introduction_list .intro_items {
+	padding-right: 20px;
+	padding-left: 0px;
+}
+.faq_left  {
+	text-align: center;
+}
+#answer_question .faq_left h3 br{
+	display: none;
+}
+a.team_link {
+	display: inline-block;
+	overflow: hidden;
+	width: 100%;
+	padding: 0 5px;
+}
+.meet_team_profile .team_item {
+	width: auto;
+	overflow: hidden;
+}
+
+.footer_center{
+    margin-top: 30px;
+}
+#introduction_img .card.center {
+	width: 80%;
+}
+#introduction_img.active .card.left {
+	display: none;
+}
+#introduction_img.active .card.right {
+	display: none;
+}
+.introduction_list {
+	display: grid;
+}
+#introduction_area {
+	padding-bottom: 90px;
+}
+#services_area {
+	padding-bottom: 75px;
+	padding-top: 75px;
+}
+#services_area .image-box img {
+	width: 90%;
+	border-radius: 20px !important;
+	margin: 0 auto;
+	display: block;
+}
+#client_review_area {
+	padding: 120px 0px;
+}
+.review_section_title h3 br{
+    display: none;
+}
+.meet_team_profile {
+	display: grid;
+	justify-content: normal;
+	gap: 30px;
+}
+a.team_link:hover .team_item h2 {
+	bottom: 36px;
+}
+.team_last  {
+	transition-delay: 0s;
+	transition-duration: 0.8s;
+	text-align: start !important;
+}
+
+
+
+
+.navbar .container-fluid{
+    position: relative;
+}
+.navbar .container-fluid::before{
+    content: " ";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+    width: 95%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.692); /* black + transparent */
+    backdrop-filter: blur(8px);         /* blur effect */
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: 12px;
+    margin: 0 auto;
+    z-index: -9;
+}
+.navbar-brand {
+	padding-top: .3125rem;
+	padding-bottom: .3125rem;
+	margin-right: 1rem;
+	font-size: 1.25rem;
+	text-decoration: none;
+	white-space: nowrap;
+	position: absolute;
+	right: 20px;
+	top: -8px;
+}
+.navbar-toggler:focus {
+	text-decoration: none;
+	outline: 0;
+	box-shadow: 0 0 0 0;
+}
+.navbar-toggler {
+	padding: .25rem .75rem;
+	font-size: 1.25rem;
+	line-height: 1;
+	background-color: transparent;
+	border: 1px solid transparent;
+	border-radius: .25rem;
+	transition: box-shadow .15s ease-in-out;
+    padding: 4px 10px;
+    margin-left: 10px;
+}
+.navbar-nav {
+	padding-left: 20px;
+}
+.nav-item {
+	margin-right: 45px;
+	padding: 10px 0;
+}
+.top_button a {
+	display: inline-flex;
+}
+/* Listing Page  */
+.hero_center_content h1 {
+	line-height: 100%;
+	width: 100%;
+}
+.hero_review_card_nai{
+  display: none;
+}
+.hero_right_img img {
+	height: 400px;
+}
+.hero_positon_center {
+	position: unset;
+	left: 0px;
+	top: 0%;
+	transform: translateY(0);
+  margin-top: 20px;
+}
+.hero_review_part {
+	margin-top: 60px;
+	position: unset;
+	bottom: 0;
+	width: 100%;
+	left: 0%;
+	transform: unset;
+	margin: 60px auto 60px;
+}
+.creation_area .experience_content {
+	position: unset;
+	top: 0%;
+	transform: unset;
+	left: 20px;
+	right: 40px;
+}
+.experience_content {
+	position: unset;
+	top: 0%;
+	transform: unset;
+	left: 40px;
+	right: 40px;
+}
+#hero_section_list {
+	height: unset;
+}
+.experience_img img {
+	height: 332px;
+	width: 100%;
+	margin-top: 25px;
+}
+#experience_section {
+	margin-top: 50px;
+}
+.form_and_details_gallery_small img {
+	height: 190px;
+}
+.deteils_icons_bio > div {
+        width: 40%;
+    }
+    .spaces_deteils_first_line {
+	grid-template-columns: repeat(1, 1fr);
+}
+.service_d_tow_card {
+	gap: 0px;
+	display: grid !important;
+}
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+	width: 100%;
+	padding-right: var(--bs-gutter-x,.75rem) !important;
+	padding-left: var(--bs-gutter-x,.75rem) !important;
+	margin-right: auto;
+	margin-left: auto;
+}
+.form_and_details_gallery {
+	margin-bottom: 15px;
+}
+.faq_main_section{
+  margin-top: 20px;
+}
+.fotter_rxtra_col{
+  display: none;
+}
+.sm_form_center{
+  margin: 0 auto;
+}
+   
+
+}
+
+/* ======================================
+   2) 768px – 991.99px
+====================================== */
+@media (min-width: 768px) and (max-width: 991.99px) {
+
+.sm_form_center{
+  margin: 0 auto;
+}
+    
+.navbar {
+	margin-top: 20px;
+	position: fixed;
+}
+.navbar .container-fluid{
+    position: relative;
+}
+.navbar .container-fluid::before{
+    content: " ";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+    width: 95%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.692); /* black + transparent */
+    backdrop-filter: blur(8px);         /* blur effect */
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: 12px;
+    margin: 0 auto;
+    z-index: -9;
+}
+.navbar-brand {
+	padding-top: .3125rem;
+	padding-bottom: .3125rem;
+	margin-right: 1rem;
+	font-size: 1.25rem;
+	text-decoration: none;
+	white-space: nowrap;
+	position: absolute;
+	right: 20px;
+	top: -8px;
+}
+.navbar-toggler:focus {
+	text-decoration: none;
+	outline: 0;
+	box-shadow: 0 0 0 0;
+}
+.navbar-toggler {
+	padding: .25rem .75rem;
+	font-size: 1.25rem;
+	line-height: 1;
+	background-color: transparent;
+	border: 1px solid transparent;
+	border-radius: .25rem;
+	transition: box-shadow .15s ease-in-out;
+    padding: 4px 10px;
+    margin-left: 10px;
+}
+.navbar-nav {
+	padding-left: 20px;
+}
+.nav-item {
+	margin-right: 45px;
+	padding: 10px 0;
+}
+.top_button a {
+	display: inline-flex;
+}
+
+    body{
+        overflow-x: hidden;
+    }
+  #hero_section {
+    position: relative;
+	background-image: url(../img/hero_bg.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.hero_bg  {
+	display: none;
+}
+.hero_mobile_over{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #00000063;
+    display: block;
+    height: 100%;
+    z-index: 1;
+}
+#hero_section .hero_content {
+	position: relative;
+	z-index: 11;
+}
+.section_title {
+	padding-left: 0px;
+}
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+	width: 100%;
+	padding-right: var(--bs-gutter-x,.75rem);
+	padding-left: var(--bs-gutter-x,.75rem);
+	margin-right: auto;
+	margin-left: auto;
+}
+#hero_section .hero_content h1 {
+	margin-top: 10px;
+	width: 90%;
+}
+.statistics_item{
+    margin-bottom: 20px;
+}
+.featured_area {
+	display: flex;
+	gap: 10px;
+	overflow-x: scroll !important;
+	overflow-y: scroll !important;
+	width: auto;
+	scrollbar-width: auto;
+	justify-content: start;
+}
+.featured_area {
+	padding-bottom: 30px;
+	margin-bottom: 120px;
+}
+.introduction_list .intro_items {
+	padding-right: 20px;
+	padding-left: 0px;
+}
+.faq_left  {
+	text-align: center;
+}
+#answer_question .faq_left h3 br{
+	display: none;
+}
+a.team_link {
+	display: inline-block;
+	overflow: hidden;
+	width: 100%;
+	padding: 0 5px;
+}
+.meet_team_profile .team_item {
+	width: auto;
+	overflow: hidden;
+}
+a.team_link:hover .team_item h2 {
+	bottom: 57px;
+}
+.footer_center{
+    margin-top: 30px;
+}
+
+/* Listing Page  */
+.hero_positon_center {
+	position: unset;
+	left: 0px;
+	top: 0%;
+	transform: translateY(0);
+}
+.hero_review_part {
+	margin-top: 60px;
+	position: unset;
+	bottom: 0;
+	width: 100%;
+	left: 0%;
+	transform: unset;
+	margin: 60px auto 60px;
+}
+.creation_area .experience_content {
+	position: unset;
+	top: 0%;
+	transform: unset;
+	left: 20px;
+	right: 40px;
+}
+.experience_content {
+	position: unset;
+	top: 0%;
+	transform: unset;
+	left: 40px;
+	right: 40px;
+}
+#hero_section_list {
+	height: unset;
+}
+.experience_img img {
+	height: 476px;
+	width: 100%;
+}
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+	width: 100%;
+	padding-right: var(--bs-gutter-x,.75rem) !important;
+	padding-left: var(--bs-gutter-x,.75rem) !important;
+	margin-right: auto;
+	margin-left: auto;
+}
+.form_and_details_gallery {
+	margin-bottom: 15px;
+}
+.faq_main_section{
+  margin-top: 20px;
+}
+.fotter_rxtra_col{
+  display: none;
+}
+
+}
+
+/* ======================================
+   3) 992px – 1024px
+====================================== */
+@media (min-width: 992px) and (max-width: 1024.99px) {
+  .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+	width: 100%;
+	padding-right: var(--bs-gutter-x,.75rem) !important;
+	padding-left: var(--bs-gutter-x,.75rem) !important;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+    body{
+        overflow-x: hidden;
+    }
+  .nav-item {
+	margin-right: 10px;
+	margin-left: 10px;
+}
+  .about_gallery_slider_items {
+    flex: 0 0 10%;
+    padding: 0 15px;
+  }
+.meet_team_profile .team_item {
+	width: auto;
+	overflow: hidden;
+}
+.team_link {
+	width: auto;
+	padding: 0 5px;
+}
+a.team_link:hover .team_item h2 {
+	bottom: 60px;
+}
+
+/* ===== Listin Page  */
+.hero_last_gap{
+  gap: 5px;
+}
+.hero_review_card {
+	padding-right: 5px;
+}
+#footer_area .col-lg-4.fotter_rxtra_col{
+  display: none;
+}
+
+}
+
+/* ======================================
+   4) 1025px – 1300px
+====================================== */
+@media (min-width: 1025px) and (max-width: 1300.99px) {
+   
+    body{
+        overflow-x: hidden;
+    }
+  .nav-item {
+    margin-right: 20px;
+  }
+  .about_gallery_slider_items {
+    flex: 0 0 10%;
+    padding: 0 15px;
+  }
+.meet_team_profile .team_item {
+	width: auto;
+	overflow: hidden;
+}
+.team_link {
+	width: auto;
+	padding: 0 5px;
+}
+a.team_link:hover .team_item h2 {
+	bottom: 60px;
+}
+}
+
+/* ======================================
+   5) 1301px and Up
+====================================== */
+@media (min-width: 1301px) {
+  /* Your CSS Here */
+}
+
+
+
+/* Tablet (768px - 1024px) */
+@media (max-width: 1024px) {
+  :root {
+    --h1-size: 48px;
+    --h2-size: 42px;
+    --h3-size: 36px;
+    --h4-regular-size: 20px;
+    --h4-statistic-size: 18px;
+    --h4-footer-size: 22px;
+
+    --body-m-size: 16px;
+    --body-s-size: 14px;
+    --intro-size: 20px;
+
+    --menu-size: 16px;
+    --form-label-size: 14px;
+    --notification-size: 12px;
+    --button-size: 14px;
+  }
+}
+
+/* Mobile (up to 767px) */
+@media (max-width: 767px) {
+  :root {
+    --h1-size: 36px;
+    --h2-size: 32px;
+    --h3-size: 28px;
+    --h4-regular-size: 18px;
+    --h4-statistic-size: 16px;
+    --h4-footer-size: 20px;
+
+    --body-m-size: 14px;
+    --body-s-size: 12px;
+    --intro-size: 18px;
+
+    --menu-size: 14px;
+    --form-label-size: 12px;
+    --notification-size: 12px;
+    --button-size: 14px;
+  }
+}
