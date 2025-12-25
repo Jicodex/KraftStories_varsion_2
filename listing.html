@@ -18,12 +18,18 @@
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
                 <!-- ===== Logo Here  -->
-                <img src="assets/img/Kraftstories.svg" alt="logo">
+                <img class="lazy" data-src="assets/img/Kraftstories.svg" alt="logo">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+                <svg width="35" height="35" viewBox="0 0 24 24" aria-hidden="true" role="img" xmlns="http://www.w3.org/2000/svg">
+  <g fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round">
+    <path d="M3 6h18"></path>
+    <path d="M3 12h18"></path>
+    <path d="M3 18h18"></path>
+  </g>
+</svg>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
@@ -129,7 +135,7 @@
                             <div class="hero_popup">
                                 <div class="container px-0">
                                     <div class="row">
-                                        <div class="col-lg-4 col-6 border_bottom">
+                                        <div class="col-lg-4 col-6 border_bottom border_right">
                                             <a href="#" class="hero_popup_content justify-content-between">
                                                 <div>
                                                     <h5>About</h5>
@@ -159,7 +165,7 @@
 
                                             </a>
                                         </div>
-                                        <div class="col-lg-4 col-6 border_bottom border_left">
+                                        <div class="col-lg-4 col-6 border_bottom border_left border_right">
                                             <a href="#" class="hero_popup_content justify-content-between">
                                                 <div>
                                                     <h5>About</h5>
@@ -174,7 +180,7 @@
 
                                             </a>
                                         </div>
-                                        <div class="col-lg-4 col-6">
+                                        <div class="col-lg-4 col-6 border_bottom_m">
                                             <a href="#" class="hero_popup_content justify-content-between">
                                                 <div>
                                                     <h5>About</h5>
@@ -189,7 +195,7 @@
 
                                             </a>
                                         </div>
-                                        <div class="col-lg-4 col-6 border_left">
+                                        <div class="col-lg-4 col-6 border_left border_right">
                                             <a href="#" class="hero_popup_content justify-content-between">
                                                 <div>
                                                     <h5>About</h5>
@@ -223,7 +229,7 @@
                                     <div class="row mt-3">
                                         <div class="col-lg-12">
                                             <div class="phpup_hero_img">
-                                                <img src="assets/img/banner.png" alt="banner">
+                                                <img class="lazy" data-src="assets/img/banner.png" alt="banner">
 
                                                 <div class="overlay">
                                                     <span class="hero_text">Reserve Now</span>
@@ -272,14 +278,14 @@
                     <div class="hero_positon_center">
                         <div class="hero_center_content text-center">
                             <div class="section_tag_titlw bottom_to_top animate">
-                                <p><img src="assets/img/icons/location.svg" alt="icon">953 5TH Ave, New York</p>
+                                <p><img class="lazy" data-src="assets/img/icons/location.svg" alt="icon">953 5TH Ave, New York</p>
                             </div>
                             <h1 class="animate-text bottom_to_top" data-type="true"
                 data-speed="0"
                 data-delay="01s"
                 data-duration="1s">Create Your Own Intention-Filled Turkish Mosaic Lamp</h1>
                             <div class="d-flex hero_review_tag justify-content-center bottom_to_top animate">
-                                <img src="assets/img/hero_users.png" alt="users">
+                                <img class="lazy" data-src="assets/img/hero_users.png" alt="users">
                                 <p>Loved by 700+ happy guests</p>
                             </div>
                             <div class="bottom_to_top animate">
@@ -300,25 +306,25 @@
                         <div class="d-flex justify-content-between">
                             <img data-src="assets/img/badge.png" alt="badge" class="bottom_to_top animate lazy">
                             <div class="d-flex hero_last_gap bottom_to_top animate">
-                                <div class="hero_review_card hero_review_card_nai text-center">
-                                    <h4>0%</h4>
-                                    <p>Satisfaction</p>
-                                </div>
-                                <div class="hero_review_card  text-center">
-                                    <h4>0%</h4>
-                                    <img src="assets/img/icons/rating.svg" alt="reting">
-                                </div>
-                                <div class="hero_review_card hero_review_card_nai no_border text-center">
-                                    <h4>0%</h4>
-                                    <p>Reviews</p>
-                                </div>
-                            </div>
+    <div class="hero_review_card hero_review_card_nai text-center">
+        <h4 class="count" data-target="100">0%</h4>
+        <p>Satisfaction</p>
+    </div>
+    <div class="hero_review_card text-center">
+        <h4 class="count" data-target="85">0%</h4>
+        <img class="lazy" data-src="assets/img/icons/rating.svg" alt="rating">
+    </div>
+    <div class="hero_review_card hero_review_card_nai no_border text-center">
+        <h4 class="count" data-target="75">0%</h4>
+        <p>Reviews</p>
+    </div>
+</div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="hero_right_img position-relative">
-                        <img src="assets/img/hero_main_imge.webp" alt="img" class="zoom_bounce animate">
+                        <img data-src="assets/img/hero_main_imge.webp" alt="img" class="zoom_bounce animate lazy">
                         <a href="#" class="icon_phone_for_hero"><svg class="icon_phone_for_hero_img" width="16"
                                 height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -341,13 +347,13 @@
             <div class="row">
                 <div class="col-lg-6 col-sm-5 order-1 order-sm-0">
                     <div class="experience_img text-center left_to_right animate">
-                        <img src="assets/img/experience.webp" alt="img">
+                        <img class="lazy" data-src="assets/img/experience.webp" alt="img">
                     </div>
                 </div>
                 <div class="col-lg-6 col-sm-7 position-relative order-0 order-sm-1 right_to_left animate">
                     <div class="experience_content">
                         <div class="section_tag_title">
-                            <p><img src="assets/img/icons/star.svg" alt="icons">Beginner-Friendly Experience</p>
+                            <p><img class="lazy" data-src="assets/img/icons/star.svg" alt="icons">Beginner-Friendly Experience</p>
                         </div>
                         <h4 class="all_section_title">What this class is</h4>
                         <p class="section_description e">This is a live, guided Turkish mosaic lamp workshop led by Nur, a
@@ -407,7 +413,7 @@
                 </div>
                 <div class="col-lg-6 col-sm-5 right_to_left animate">
                     <div class="experience_img text-center">
-                        <img src="assets/img/create_img.webp" alt="img">
+                        <img class="lazy" data-src="assets/img/create_img.webp" alt="img">
                     </div>
                 </div>
             </div>
@@ -421,29 +427,29 @@
             <div class="row">
                 <div class="col-lg-7">
                     <div class="form_and_details_gallery">
-                        <img src="assets/img/gallery_one_big.webp" alt="gallery">
+                        <img class="lazy" data-src="assets/img/gallery_one_big.webp" alt="gallery">
                     </div>
                 </div>
                 <div class="col-lg-5">
                     <div class="row">
                         <div class="col-lg-6 col-6 pr_some">
                             <div class="form_and_details_gallery_small">
-                                <img src="assets/img/gallery_two.webp" alt="gallery">
+                                <img class="lazy" data-src="assets/img/gallery_two.webp" alt="gallery">
                             </div>
                         </div>
                         <div class="col-lg-6 col-6 pl_some">
                             <div class="form_and_details_gallery_small">
-                                <img src="assets/img/gallery_three.webp" alt="gallery">
+                                <img class="lazy" data-src="assets/img/gallery_three.webp" alt="gallery">
                             </div>
                         </div>
                         <div class="col-lg-6 col-6 mt_some pr_some">
                             <div class="form_and_details_gallery_small">
-                                <img src="assets/img/gallery_four.webp" alt="gallery">
+                                <img class="lazy" data-src="assets/img/gallery_four.webp" alt="gallery">
                             </div>
                         </div>
                         <div class="col-lg-6 col-6 mt_some pl_some">
                             <div class="form_and_details_gallery_small">
-                                <img src="assets/img/gallery_five.webp" alt="gallery">
+                                <img class="lazy" data-src="assets/img/gallery_five.webp" alt="gallery">
                             </div>
                         </div>
                     </div>
@@ -468,15 +474,15 @@
                                 people who say they’re “not artistic.”</p>
                             <div class="deteils_icons_bio">
                                 <div class="d-flex">
-                                    <img src="assets/img/icons/clock.svg" alt="icons">
+                                    <img class="lazy" data-src="assets/img/icons/clock.svg" alt="icons">
                                     <h4>240 sqm</h4>
                                 </div>
                                 <div class="d-flex">
-                                    <img src="assets/img/icons/people.svg" alt="icons">
+                                    <img class="lazy" data-src="assets/img/icons/people.svg" alt="icons">
                                     <h4>48 people</h4>
                                 </div>
                                 <div class="d-flex">
-                                    <img src="assets/img/icons/fill_star.svg" alt="icons">
+                                    <img class="lazy" data-src="assets/img/icons/fill_star.svg" alt="icons">
                                     <h4>34 desks</h4>
                                 </div>
                             </div>
@@ -486,7 +492,7 @@
                             <div class="spaces_deteils_first_line">
                                 <div class="spaces_card">
                                     <div class="d-flex spaces_card_info">
-                                        <img src="assets/img/icons/lamp_light.svg" alt="icons">
+                                        <img class="lazy" data-src="assets/img/icons/lamp_light.svg" alt="icons">
                                         <div>
                                             <h4>Turkish Mosaic Lamp</h4>
                                             <p>Create your own Turkish-style mosaic lamp using a glass globe, colorful
@@ -496,7 +502,7 @@
                                 </div>
                                 <div class="spaces_card">
                                     <div class="d-flex spaces_card_info">
-                                        <img src="assets/img/icons/star_sparkle.svg" alt="icons">
+                                        <img class="lazy" data-src="assets/img/icons/star_sparkle.svg" alt="icons">
                                         <div>
                                             <h4>Intention-Based Making</h4>
                                             <p>Set a personal intention and infuse it into your lamp.</p>
@@ -507,7 +513,7 @@
                             <div class="spaces_deteils_first_line">
                                 <div class="spaces_card">
                                     <div class="d-flex spaces_card_info">
-                                        <img src="assets/img/icons/desk.svg" alt="icons">
+                                        <img class="lazy" data-src="assets/img/icons/desk.svg" alt="icons">
                                         <div>
                                             <h4>Dedicated Desk</h4>
                                             <p>Choose from guided patterns or improvise your own designs.</p>
@@ -516,7 +522,7 @@
                                 </div>
                                 <div class="spaces_card">
                                     <div class="d-flex spaces_card_info">
-                                        <img src="assets/img/icons/plug.svg" alt="icons">
+                                        <img class="lazy" data-src="assets/img/icons/plug.svg" alt="icons">
                                         <div>
                                             <h4>Functional Takeaway</h4>
                                             <p>Participants leave with a functional lamp (nightlight-level brightness).
@@ -531,49 +537,49 @@
                             <div class="d-flex service_d_tow_card">
                                 <div class="service_part_one">
                                     <div class="d-flex">
-                                        <img src="assets/img/icons/bulb.svg" alt="icon">
+                                        <img class="lazy" data-src="assets/img/icons/bulb.svg" alt="icon">
                                         <p>Glass globe</p>
                                     </div>
                                     <div class="d-flex">
-                                        <img src="assets/img/icons/desk_two.svg" alt="icon">
+                                        <img class="lazy" data-src="assets/img/icons/desk_two.svg" alt="icon">
                                         <p>Dedicated desks</p>
                                     </div>
                                     <div class="d-flex">
-                                        <img src="assets/img/icons/drop.svg" alt="icon">
+                                        <img class="lazy" data-src="assets/img/icons/drop.svg" alt="icon">
                                         <p>Craft glue</p>
                                     </div>
                                     <div class="d-flex">
-                                        <img src="assets/img/icons/clipboard.svg" alt="icon">
+                                        <img class="lazy" data-src="assets/img/icons/clipboard.svg" alt="icon">
                                         <p>Printed instructions</p>
                                     </div>
                                     <div class="d-flex">
-                                        <img src="assets/img/icons/knife.svg" alt="icon">
+                                        <img class="lazy" data-src="assets/img/icons/knife.svg" alt="icon">
                                         <p>Kitchen &amp; lounge</p>
                                     </div>
                                     <div class="d-flex">
-                                        <img src="assets/img/icons/k.svg" alt="icon">
+                                        <img class="lazy" data-src="assets/img/icons/k.svg" alt="icon">
                                         <p>Wellness room</p>
                                     </div>
                                 </div>
                                 <div class="service_part_one">
                                     <div class="d-flex">
-                                        <img src="assets/img/icons/app_more.svg" alt="icon">
+                                        <img class="lazy" data-src="assets/img/icons/app_more.svg" alt="icon">
                                         <p>GHand-cut glass tiles</p>
                                     </div>
                                     <div class="d-flex">
-                                        <img src="assets/img/icons/tasbih.svg" alt="icon">
+                                        <img class="lazy" data-src="assets/img/icons/tasbih.svg" alt="icon">
                                         <p>Glass beads</p>
                                     </div>
                                     <div class="d-flex">
-                                        <img src="assets/img/icons/compass.svg" alt="icon">
+                                        <img class="lazy" data-src="assets/img/icons/compass.svg" alt="icon">
                                         <p>Tweezers</p>
                                     </div>
                                     <div class="d-flex">
-                                        <img src="assets/img/icons/cake.svg" alt="icon">
+                                        <img class="lazy" data-src="assets/img/icons/cake.svg" alt="icon">
                                         <p>Daily Cleaning</p>
                                     </div>
                                     <div class="d-flex">
-                                        <img src="assets/img/icons/leaf.svg" alt="icon">
+                                        <img class="lazy" data-src="assets/img/icons/leaf.svg" alt="icon">
                                         <p>Calm &amp; green spaces</p>
                                     </div>
                                 </div>
@@ -646,39 +652,42 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="reviews_title_section text-center">
-                        <p class="section_tag ms-1">Reviews</p>
-                        <div class="d-flex justify-content-center gap-1 mt-3">
-                            <img src="assets/img/icons/dan_left.svg" alt="icon">
-                            <h3>0.00</h3>
-                            <img src="assets/img/icons/dan_right.svg" alt="icon">
-                        </div>
-                        <h4>We’re proud to deliver a stay <br> that guests consistently love.</h4>
-                        <div class="review_top_rating">
-                            <div class="top_rating_items">
-                                <h4>4.9</h4>
-                                <p>Cleanliness</p>
-                            </div>
-                            <div class="top_rating_items">
-                                <h4>4.9</h4>
-                                <p>Cleanliness</p>
-                            </div>
-                            <div class="top_rating_items">
-                                <h4>4.9</h4>
-                                <p>Cleanliness</p>
-                            </div>
-                            <div class="top_rating_items">
-                                <h4>4.9</h4>
-                                <p>Cleanliness</p>
-                            </div>
-                        </div>
-                    </div>
+    <p class="section_tag ms-1 animate bottom_to_top">Reviews</p>
+
+    <div class="d-flex justify-content-center gap-1 mt-3 animate bottom_to_top">
+        <img class="lazy" data-src="assets/img/icons/dan_left.svg" alt="icon">
+        <h3 class="rating_count" data-target="5.00" data-delay="0.6s" data-duration="1.2s">0.00</h3>
+        <img class="lazy" data-src="assets/img/icons/dan_right.svg" alt="icon">
+    </div>
+
+    <h4 class="animate bottom_to_top">We’re proud to deliver a stay <br> that guests consistently love.</h4>
+
+    <div class="review_top_rating">
+        <div class="top_rating_items animate bottom_to_top" data-delay="0.3s" data-duration="1.2s">
+            <h4 class="count" data-target="4.9">0</h4>
+            <p>Cleanliness</p>
+        </div>
+        <div class="top_rating_items animate bottom_to_top" data-delay="0.4s" data-duration="1.2s">
+            <h4 class="count" data-target="4.9">0</h4>
+            <p>Cleanliness</p>
+        </div>
+        <div class="top_rating_items animate bottom_to_top" data-delay="0.5s" data-duration="1.2s">
+            <h4 class="count" data-target="4.9">0</h4>
+            <p>Cleanliness</p>
+        </div>
+        <div class="top_rating_items animate bottom_to_top" data-delay="0.6s" data-duration="1.2s">
+            <h4 class="count" data-target="4.9">0</h4>
+            <p>Cleanliness</p>
+        </div>
+    </div>
+</div>
                 </div>
             </div>
             <div class="reviews_area">
-                <div class="review_card_items">
+                <div class="review_card_items animate zoom_bounce">
                     <div class="review_header">
                         <div class="d-flex">
-                            <img class="user_profile" src="assets/img/review_profile.webp" alt="users">
+                            <img class="user_profile lazy" data-src="assets/img/review_profile.webp" alt="users">
                             <div class="review_user_name_possi">
                                 <h4>Andrew K.</h4>
                                 <p>Zwolle, Netherlands</p>
@@ -686,7 +695,7 @@
                         </div>
                         <div class="d-flex header_rating_count">
                             <p>5.0</p>
-                            <img src="assets/img/icons/star.svg" alt="star">
+                            <img class="lazy" data-src="assets/img/icons/star.svg" alt="star">
                         </div>
                     </div>
                     <div class="review_content">
@@ -701,10 +710,10 @@
                         <p>Aug 28, 2025</p>
                     </div>
                 </div>
-                <div class="review_card_items">
+                <div class="review_card_items animate zoom_bounce">
                     <div class="review_header">
                         <div class="d-flex">
-                            <img class="user_profile" src="assets/img/review_profile.webp" alt="users">
+                            <img class="user_profile lazy" data-src="assets/img/review_profile.webp" alt="users">
                             <div class="review_user_name_possi">
                                 <h4>Andrew K.</h4>
                                 <p>Zwolle, Netherlands</p>
@@ -712,7 +721,7 @@
                         </div>
                         <div class="d-flex header_rating_count">
                             <p>5.0</p>
-                            <img src="assets/img/icons/star.svg" alt="star">
+                            <img class="lazy" data-src="assets/img/icons/star.svg" alt="star">
                         </div>
                     </div>
                     <div class="review_content">
@@ -723,10 +732,10 @@
                         <p>Aug 28, 2025</p>
                     </div>
                 </div>
-                <div class="review_card_items">
+                <div class="review_card_items animate zoom_bounce">
                     <div class="review_header">
                         <div class="d-flex">
-                            <img class="user_profile" src="assets/img/review_profile.webp" alt="users">
+                            <img class="user_profile lazy" data-src="assets/img/review_profile.webp" alt="users">
                             <div class="review_user_name_possi">
                                 <h4>Andrew K.</h4>
                                 <p>Zwolle, Netherlands</p>
@@ -734,7 +743,7 @@
                         </div>
                         <div class="d-flex header_rating_count">
                             <p>5.0</p>
-                            <img src="assets/img/icons/star.svg" alt="star">
+                            <img class="lazy" data-src="assets/img/icons/star.svg" alt="star">
                         </div>
                     </div>
                     <div class="review_content">
@@ -748,10 +757,10 @@
                         <p>Aug 28, 2025</p>
                     </div>
                 </div>
-                <div class="review_card_items">
+                <div class="review_card_items animate zoom_bounce">
                     <div class="review_header">
                         <div class="d-flex">
-                            <img class="user_profile" src="assets/img/review_profile.webp" alt="users">
+                            <img class="user_profile lazy" data-src="assets/img/review_profile.webp" alt="users">
                             <div class="review_user_name_possi">
                                 <h4>Andrew K.</h4>
                                 <p>Zwolle, Netherlands</p>
@@ -759,7 +768,7 @@
                         </div>
                         <div class="d-flex header_rating_count">
                             <p>5.0</p>
-                            <img src="assets/img/icons/star.svg" alt="star">
+                            <img class="lazy" data-src="assets/img/icons/star.svg" alt="star">
                         </div>
                     </div>
                     <div class="review_content">
@@ -770,10 +779,10 @@
                         <p>Aug 28, 2025</p>
                     </div>
                 </div>
-                <div class="review_card_items">
+                <div class="review_card_items animate zoom_bounce">
                     <div class="review_header">
                         <div class="d-flex">
-                            <img class="user_profile" src="assets/img/review_profile.webp" alt="users">
+                            <img class="user_profile lazy" data-src="assets/img/review_profile.webp" alt="users">
                             <div class="review_user_name_possi">
                                 <h4>Andrew K.</h4>
                                 <p>Zwolle, Netherlands</p>
@@ -781,7 +790,7 @@
                         </div>
                         <div class="d-flex header_rating_count">
                             <p>5.0</p>
-                            <img src="assets/img/icons/star.svg" alt="star">
+                            <img class="lazy" data-src="assets/img/icons/star.svg" alt="star">
                         </div>
                     </div>
                     <div class="review_content">
@@ -792,10 +801,10 @@
                         <p>Aug 28, 2025</p>
                     </div>
                 </div>
-                <div class="review_card_items">
+                <div class="review_card_items animate zoom_bounce">
                     <div class="review_header">
                         <div class="d-flex">
-                            <img class="user_profile" src="assets/img/review_profile.webp" alt="users">
+                            <img class="user_profile lazy" data-src="assets/img/review_profile.webp" alt="users">
                             <div class="review_user_name_possi">
                                 <h4>Andrew K.</h4>
                                 <p>Zwolle, Netherlands</p>
@@ -803,7 +812,7 @@
                         </div>
                         <div class="d-flex header_rating_count">
                             <p>5.0</p>
-                            <img src="assets/img/icons/star.svg" alt="star">
+                            <img class="lazy" data-src="assets/img/icons/star.svg" alt="star">
                         </div>
                     </div>
                     <div class="review_content">
@@ -817,10 +826,10 @@
                         <p>Aug 28, 2025</p>
                     </div>
                 </div>
-                <div class="review_card_items">
+                <div class="review_card_items animate zoom_bounce">
                     <div class="review_header">
                         <div class="d-flex">
-                            <img class="user_profile" src="assets/img/review_profile.webp" alt="users">
+                            <img class="user_profile lazy" data-src="assets/img/review_profile.webp" alt="users">
                             <div class="review_user_name_possi">
                                 <h4>Andrew K.</h4>
                                 <p>Zwolle, Netherlands</p>
@@ -828,7 +837,7 @@
                         </div>
                         <div class="d-flex header_rating_count">
                             <p>5.0</p>
-                            <img src="assets/img/icons/star.svg" alt="star">
+                            <img class="lazy" data-src="assets/img/icons/star.svg" alt="star">
                         </div>
                     </div>
                     <div class="review_content">
@@ -842,10 +851,10 @@
                         <p>Aug 28, 2025</p>
                     </div>
                 </div>
-                <div class="review_card_items">
+                <div class="review_card_items animate zoom_bounce">
                     <div class="review_header">
                         <div class="d-flex">
-                            <img class="user_profile" src="assets/img/review_profile.webp" alt="users">
+                            <img class="user_profile lazy" data-src="assets/img/review_profile.webp" alt="users">
                             <div class="review_user_name_possi">
                                 <h4>Andrew K.</h4>
                                 <p>Zwolle, Netherlands</p>
@@ -853,7 +862,7 @@
                         </div>
                         <div class="d-flex header_rating_count">
                             <p>5.0</p>
-                            <img src="assets/img/icons/star.svg" alt="star">
+                            <img class="lazy" data-src="assets/img/icons/star.svg" alt="star">
                         </div>
                     </div>
                     <div class="review_content">
@@ -864,10 +873,10 @@
                         <p>Aug 28, 2025</p>
                     </div>
                 </div>
-                <div class="review_card_items">
+                <div class="review_card_items animate zoom_bounce">
                     <div class="review_header">
                         <div class="d-flex">
-                            <img class="user_profile" src="assets/img/review_profile.webp" alt="users">
+                            <img class="user_profile lazy" data-src="assets/img/review_profile.webp" alt="users">
                             <div class="review_user_name_possi">
                                 <h4>Andrew K.</h4>
                                 <p>Zwolle, Netherlands</p>
@@ -875,7 +884,7 @@
                         </div>
                         <div class="d-flex header_rating_count">
                             <p>5.0</p>
-                            <img src="assets/img/icons/star.svg" alt="star">
+                            <img class="lazy" data-src="assets/img/icons/star.svg" alt="star">
                         </div>
                     </div>
                     <div class="review_content">
@@ -889,7 +898,7 @@
                     </div>
                 </div>
             </div>
-            <div class="d-flex justify-content-center mt-3">
+            <div class="d-flex justify-content-center mt-3 animate bottom_to_top">
                 <a href="#" class="btn-slide"
                     style=" --bg:#101014; --text:#ffffff; --circle:#ffffff; --arrow:#101014; --bg-h:#5b4df5; --text-h:#fff;--circle-h:#fff;--arrow-h:#5b4df5;--pt:15px; --pb:15px; --pl:22px; --pr:22px;">
                     <div class="icon-wrap">
@@ -910,9 +919,11 @@
             <div class="row">
                 <div class="col-lg-6">
                     <div class="faq_title_section">
-                        <p class="section_tag">FAQ</p>
-                        <h4>Everything You <br> Need to Know</h4>
-                        <a href="#" class="btn-slide"
+                        <p class="section_tag animate bottom_to_top">FAQ</p>
+                        <h4 class="animate-text bottom_to_top" data-type="true" data-speed="0" data-delay="01s"
+                            data-duration="1s">Everything You Need to Know</h4>
+                            <div class="animate bottom_to_top">
+                                <a href="#" class="btn-slide "
                             style=" --bg:#101014; --text:#ffffff; --circle:#ffffff; --arrow:#101014; --bg-h:#5b4df5; --text-h:#fff;--circle-h:#fff;--arrow-h:#5b4df5;--pt:15px; --pb:15px; --pl:22px; --pr:22px;">
                             <div class="icon-wrap">
                                 <svg viewBox="0 0 24 24">
@@ -921,17 +932,20 @@
                             </div>
                             <span>Book Now</span>
                         </a>
+                            </div>
+                        
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="faq_main_section">
                         <div class="accordion accordion-flush" id="accordionFlushExample">
                             <div class="accordion-item">
-                                <h2 class="accordion-header" id="flush-headingOne">
+                                <h2 class="accordion-header animate bottom_to_top rotate_x_anim" data-delay="0.2s"
+    data-duration="1.0s" id="flush-headingOne" >
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                         data-bs-target="#flush-collapseOne" aria-expanded="false"
                                         aria-controls="flush-collapseOne">
-                                        <img src="assets/img/review_profile.webp" alt="img">
+                                        <img class="lazy" data-src="assets/img/review_profile.webp" alt="img">
                                         Do I need any prior art or craft
                                         experience?
                                     </button>
@@ -947,11 +961,12 @@
                                 </div>
                             </div>
                             <div class="accordion-item">
-                                <h2 class="accordion-header" id="flush-headingTwo">
+                                <h2 class="accordion-header animate bottom_to_top rotate_x_anim" data-delay="0.3s"
+    data-duration="1.0s" id="flush-headingTwo">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                         data-bs-target="#flush-collapseTwo" aria-expanded="false"
                                         aria-controls="flush-collapseTwo">
-                                        <img src="assets/img/review_profile.webp" alt="img">
+                                        <img class="lazy" data-src="assets/img/review_profile.webp" alt="img">
                                         What will I make during the class?
                                     </button>
                                 </h2>
@@ -964,11 +979,12 @@
                                 </div>
                             </div>
                             <div class="accordion-item">
-                                <h2 class="accordion-header" id="flush-headingThree">
+                                <h2 class="accordion-header animate bottom_to_top rotate_x_anim" data-delay="0.4s"
+    data-duration="1.0s" id="flush-headingThree">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                         data-bs-target="#flush-collapseThree" aria-expanded="false"
                                         aria-controls="flush-collapseThree">
-                                        <img src="assets/img/create_img.webp" alt="img">
+                                        <img class="lazy" data-src="assets/img/create_img.webp" alt="img">
                                         How long is the workshop and
                                         what's included?
                                     </button>
@@ -984,11 +1000,12 @@
                                 </div>
                             </div>
                             <div class="accordion-item">
-                                <h2 class="accordion-header" id="flush-headingFour">
+                                <h2 class="accordion-header animate bottom_to_top rotate_x_anim" data-delay="0.5s"
+    data-duration="1.0s" id="flush-headingFour">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                         data-bs-target="#flush-collapseFour" aria-expanded="false"
                                         aria-controls="flush-collapseFour">
-                                        <img src="assets/img/review_profile.webp" alt="img">
+                                        <img class="lazy" data-src="assets/img/review_profile.webp" alt="img">
                                         Where is the workshop and who can
                                         attend?
                                     </button>

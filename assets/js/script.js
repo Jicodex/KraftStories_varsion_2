@@ -1,3 +1,91 @@
+// ======== Listing Page Revies Count Down Start 
+document.addEventListener("DOMContentLoaded", () => {
+    const counters = document.querySelectorAll(".count");
+    const ratingCounter = document.querySelector(".rating_count");
+    let counted = false;
+
+    const duration = 2000; // 2 seconds
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if(entry.isIntersecting && !counted){
+                counted = true;
+
+                // Count for top ratings
+                counters.forEach(counter => {
+                    const target = parseFloat(counter.getAttribute("data-target"));
+                    const startTime = performance.now();
+
+                    const updateCount = (currentTime) => {
+                        const elapsed = currentTime - startTime;
+                        let progress = Math.min(elapsed / duration, 1);
+                        counter.innerText = (target * progress).toFixed(1);
+                        if(progress < 1){
+                            requestAnimationFrame(updateCount);
+                        } else {
+                            counter.innerText = target.toFixed(1);
+                        }
+                    }
+                    requestAnimationFrame(updateCount);
+                });
+
+                // Count for main rating
+                if(ratingCounter){
+                    const target = parseFloat(ratingCounter.getAttribute("data-target"));
+                    const startTime = performance.now();
+
+                    const updateRating = (currentTime) => {
+                        const elapsed = currentTime - startTime;
+                        let progress = Math.min(elapsed / duration, 1);
+                        ratingCounter.innerText = (target * progress).toFixed(2);
+                        if(progress < 1){
+                            requestAnimationFrame(updateRating);
+                        } else {
+                            ratingCounter.innerText = target.toFixed(2);
+                        }
+                    }
+                    requestAnimationFrame(updateRating);
+                }
+
+            }
+        });
+    }, { threshold: 0.5 });
+
+    observer.observe(document.querySelector(".reviews_title_section"));
+});
+// ======== Listing Page Revies Count Down End
+// ======== Listing Page Hero Count Down Start 
+document.addEventListener("DOMContentLoaded", () => {
+    const counters = document.querySelectorAll(".count");
+    let counted = false; // একবারেই count হবে
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting && !counted) {
+                counted = true;
+                counters.forEach(counter => {
+                    const updateCount = () => {
+                        const target = +counter.getAttribute("data-target");
+                        let count = +counter.innerText.replace('%','');
+                        const increment = target / 100;
+
+                        if (count < target) {
+                            counter.innerText = Math.ceil(count + increment) + "%";
+                            setTimeout(updateCount, 20);
+                        } else {
+                            counter.innerText = target + "%";
+                        }
+                    }
+                    updateCount();
+                });
+            }
+        });
+    }, { threshold: 0.5 });
+
+    observer.observe(document.querySelector(".hero_last_gap"));
+});
+// ======== Listing Page Hero Count Down End 
+
 // Hero Popup Start
 document.addEventListener("DOMContentLoaded", () => {
   const btn = document.getElementById("hero_popup_id");
@@ -164,33 +252,60 @@ document.addEventListener("DOMContentLoaded", () => {
   // ----------------------
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
-      if(entry.isIntersecting){
+      if (entry.isIntersecting) {
 
         const el = entry.target;
 
-        if(el.dataset.type === "true"){
+        // ---------- TYPING EFFECT ----------
+        // ---------- TYPING EFFECT ----------
+if (el.dataset.type === "true") {
 
-          const text = el.textContent;
-          el.textContent = "";
-          el.classList.add("show");
+  const text = el.textContent.trim();
+  el.textContent = "";
+  el.classList.add("show");
 
-          text.split("").forEach((char, i) => {
-            const span = document.createElement("span");
-            // Preserve space character
-            span.textContent = char === " " ? "\u00A0" : char;
+  const speed = parseFloat(el.dataset.speed) || 0.05;
 
-            // Delay per letter for typing
-            span.style.animationDelay = `${i * 0.05}s`;
+  // split text by words
+  const words = text.split(" ");
 
-            el.appendChild(span);
-          });
+  let letterIndex = 0;
 
-        } else {
-          // Normal scroll animations
+  words.forEach((word, wIndex) => {
+
+    // word wrapper (prevents word break)
+    const wordSpan = document.createElement("span");
+    wordSpan.className = "word";
+
+    // split word into letters
+    word.split("").forEach(char => {
+      const span = document.createElement("span");
+      span.textContent = char;
+      span.style.animationDelay = `${letterIndex * speed}s`;
+      wordSpan.appendChild(span);
+      letterIndex++;
+    });
+
+    el.appendChild(wordSpan);
+
+    // add space after word (except last)
+    if (wIndex !== words.length - 1) {
+      const space = document.createTextNode("\u00A0");
+      el.appendChild(space);
+      letterIndex++;
+    }
+  });
+}
+
+        // ---------- NORMAL SCROLL ANIMATION ----------
+        else {
+
           const delay = el.dataset.delay || "0s";
           const duration = el.dataset.duration || "0.8s";
+
           el.style.transitionDelay = delay;
           el.style.transitionDuration = duration;
+
           el.classList.add("show");
         }
 
@@ -198,12 +313,17 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }, { threshold: 0.4 });
 
+  // ----------------------
+  // OBSERVE ELEMENTS
+  // ----------------------
   const elements = document.querySelectorAll(
     ".animate, .animate-text, .bottom_to_top, .zoom_bounce, .left_to_right, .right_to_left"
   );
+
   elements.forEach(el => observer.observe(el));
 
 });
+
 
 
 // ===== lazy Image 
@@ -271,3 +391,139 @@ document.addEventListener("DOMContentLoaded", () => {
   observer.observe(document.querySelector("#introduction_img"));
 
 });
+
+// ======== Shop page Product Filter 
+const tabs = document.querySelectorAll(".filter-tabs .nav-link");
+  const items = document.querySelectorAll(".product-item");
+
+  tabs.forEach(tab => {
+    tab.addEventListener("click", () => {
+
+      // active class
+      tabs.forEach(t => t.classList.remove("active"));
+      tab.classList.add("active");
+
+      const filter = tab.getAttribute("data-filter");
+
+      items.forEach(item => {
+        if (filter === "all" || item.dataset.category === filter) {
+          item.style.display = "block";
+        } else {
+          item.style.display = "none";
+        }
+      });
+
+    });
+  });
+
+  // ========== Single Product apge 
+  // Img slide 
+  const mainImg = document.querySelector('.single_product_view img');
+const thumbnails = document.querySelectorAll('.single_product_img_slide img');
+
+thumbnails.forEach(thumb => {
+    thumb.addEventListener('click', () => {
+        const newSrc = thumb.getAttribute('data-src');
+
+        // fade out main image
+        mainImg.classList.add('fade-out');
+
+        // wait for fade out, then change src and fade in
+        setTimeout(() => {
+            mainImg.setAttribute('data-src', newSrc);
+            mainImg.src = newSrc;
+            mainImg.classList.remove('fade-out');
+        }, 300);
+
+        // remove active class from all thumbnails
+        thumbnails.forEach(t => t.classList.remove('active'));
+
+        // add active class to clicked thumbnail
+        thumb.classList.add('active');
+    });
+});
+
+
+// ===== Single Product Form 
+// Quantity
+const qtySpan = document.getElementById('quantity_value');
+const qtyInput = document.getElementById('product_quantity');
+document.getElementById('increase_qty').addEventListener('click', () => {
+    let qty = parseInt(qtySpan.textContent);
+    qty++;
+    qtySpan.textContent = qty;
+    qtyInput.value = qty;
+});
+
+document.getElementById('decrease_qty').addEventListener('click', () => {
+    let qty = parseInt(qtySpan.textContent);
+    if (qty > 1) qty--; // prevent <1
+    qtySpan.textContent = qty;
+    qtyInput.value = qty;
+});
+
+// Size Selection
+const sizeOptions = document.querySelectorAll('.size_select_for_product ul li');
+const sizeInput = document.getElementById('product_size');
+
+// set default active (first item)
+if(sizeOptions.length > 0){
+    sizeOptions.forEach(o => o.classList.remove('active')); // clean
+    sizeOptions[0].classList.add('active');
+    sizeInput.value = sizeOptions[0].getAttribute('data-value');
+}
+
+// click to change active
+sizeOptions.forEach(option => {
+    option.addEventListener('click', () => {
+        sizeOptions.forEach(o => o.classList.remove('active'));
+        option.classList.add('active');
+        sizeInput.value = option.getAttribute('data-value');
+    });
+});
+
+// Option Selection
+const productOptions = document.querySelectorAll('.option_slect_for_product ul li');
+const optionInput = document.getElementById('product_option');
+
+// set default active (first item)
+if(productOptions.length > 0){
+    productOptions.forEach(o => o.classList.remove('active'));
+    productOptions[0].classList.add('active');
+    optionInput.value = productOptions[0].getAttribute('data-value');
+}
+
+// click to change active
+productOptions.forEach(option => {
+    option.addEventListener('click', () => {
+        productOptions.forEach(o => o.classList.remove('active'));
+        option.classList.add('active');
+        optionInput.value = option.getAttribute('data-value');
+    });
+});
+
+
+// ============ Single Product Description 
+document.addEventListener("DOMContentLoaded", function() {
+    const items = document.querySelectorAll(".jholok_custom_accordion .jholok_accordion_item");
+
+    items.forEach(item => {
+        const header = item.querySelector(".jholok_accordion_header");
+
+        header.addEventListener("click", () => {
+            // Close any other open item
+            items.forEach(i => {
+                if (i !== item) {
+                    i.classList.remove("open");
+                }
+            });
+
+            // Toggle clicked item
+            item.classList.toggle("open");
+        });
+    });
+});
+
+// ======== about page mision vision silder 
+
+
