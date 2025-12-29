@@ -551,23 +551,32 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (!fixedCTA || !normalCTA || !anchor) return;
 
+    let isFixedVisible = true; // current state
+
     const observer = new IntersectionObserver(
         ([entry]) => {
-            if (entry.isIntersecting) {
+
+            // entry.isIntersecting flips only AFTER buffer
+            if (entry.isIntersecting && isFixedVisible) {
                 fixedCTA.classList.add("is-hidden");
                 normalCTA.classList.remove("is-hidden");
-            } else {
+                isFixedVisible = false;
+            }
+
+            if (!entry.isIntersecting && !isFixedVisible) {
                 fixedCTA.classList.remove("is-hidden");
                 normalCTA.classList.add("is-hidden");
+                isFixedVisible = true;
             }
+
         },
         {
             root: null,
-            threshold: 0
+            threshold: 0,
+            rootMargin: "-2px 0px -2px 0px" // 🔥 2px dead zone
         }
     );
 
     observer.observe(anchor);
-
 });
 

@@ -4553,6 +4553,15 @@ color: var(--primary);
     .is-hidden {
         display: none !important;
     }
+    .product_layout,
+.left_bottom,
+.product_row {
+    transform: none !important;
+    overflow: visible !important;
+}
+.dashj{
+  display: none;
+}
 }
 
 
