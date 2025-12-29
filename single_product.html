@@ -409,21 +409,10 @@
                     </div>
 
                     <!-- ==== Only Show Mobile  -->
+                    <div class="mobile_cta_anchor"></div>
 
-
-                    <div class="submit_and_countiti prize_show_mobile prize_fixed">
-                        <div class="d-flex gap-2">
-                            <div class="count_number_for_product">
-                                <button type="button" id="decrease_qty">-</button>
-                                <span id="quantity_value">1</span>
-                                <button type="button" id="increase_qty">+</button>
-                            </div>
-                            <div class="submit_button_single_product">
-                                <button type="submit" class="slide_btn"><span>ADD TO BASKET</span></button>
-                            </div>
-                        </div>
-                    </div>
-
+                    <!-- Spacer keeps layout height stable -->
+                    <div class="mobile_cta_spacer"></div>
                     <div class="submit_and_countiti prize_show_mobile prize_normal">
                         <div class="d-flex gap-2">
                             <div class="count_number_for_product">
@@ -436,33 +425,57 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
     </section>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
 
-    <script>
-        document.querySelectorAll('.single_product_view').forEach(box => {
-            const img = box.querySelector('img');
+  if (window.innerWidth > 991) return;
 
-            box.addEventListener('mousemove', (e) => {
-                const rect = box.getBoundingClientRect();
+  const cta    = document.querySelector(".prize_show_mobile");
+  const anchor = document.querySelector(".mobile_cta_anchor");
 
-                const x = ((e.clientX - rect.left) / rect.width) * 100;
-                const y = ((e.clientY - rect.top) / rect.height) * 100;
+  if (!cta || !anchor) return;
 
-                img.style.transformOrigin = `${x}% ${y}%`;
-                img.style.transform = 'scale(1.8)';
-            });
+  let isFixed = false;
+  const DEAD = 4; // small buffer
 
-            box.addEventListener('mouseleave', () => {
-                img.style.transformOrigin = 'center center';
-                img.style.transform = 'scale(1)';
-            });
-        });
-    </script>
-    <div class="mobile_cta_anchor">
+  function updateCTA() {
+    const viewportBottom = window.pageYOffset + window.innerHeight;
+    const anchorTop =
+      anchor.getBoundingClientRect().top + window.pageYOffset;
+
+    /*
+      🔑 KEY LOGIC
+      CTA fixed থাকবে যতক্ষণ না:
+      viewportBottom >= anchorTop
+    */
+    if (viewportBottom < anchorTop - DEAD) {
+      if (!isFixed) {
+        cta.classList.add("is-fixed");
+        cta.classList.remove("is-normal");
+        isFixed = true;
+      }
+    } else {
+      if (isFixed) {
+        cta.classList.remove("is-fixed");
+        cta.classList.add("is-normal");
+        isFixed = false;
+      }
+    }
+  }
+
+  // initial state
+  cta.classList.add("is-normal");
+  updateCTA();
+
+  window.addEventListener("scroll", updateCTA, { passive: true });
+  window.addEventListener("resize", updateCTA);
+
+});
+</script>
         <!-- ========== Single Product Section Ends Here ==========  -->
 
         <!-- ========== Similar Product Area Starts Here ==========  -->
@@ -648,7 +661,6 @@
             </div>
         </footer>
         <!-- ========== END: Footer Section ========== -->
-    </div>
     <!-- ========== All JS Link  -->
     <script src="assets/js/jquery-1.12.4.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>

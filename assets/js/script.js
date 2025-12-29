@@ -541,42 +541,4 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 // ======== about page mision vision silder 
-document.addEventListener("DOMContentLoaded", function () {
-
-    if (window.innerWidth > 991) return;
-
-    const fixedCTA = document.querySelector(".prize_fixed");
-    const normalCTA = document.querySelector(".prize_normal");
-    const anchor = document.querySelector(".mobile_cta_anchor");
-
-    if (!fixedCTA || !normalCTA || !anchor) return;
-
-    let isFixedVisible = true; // current state
-
-    const observer = new IntersectionObserver(
-        ([entry]) => {
-
-            // entry.isIntersecting flips only AFTER buffer
-            if (entry.isIntersecting && isFixedVisible) {
-                fixedCTA.classList.add("is-hidden");
-                normalCTA.classList.remove("is-hidden");
-                isFixedVisible = false;
-            }
-
-            if (!entry.isIntersecting && !isFixedVisible) {
-                fixedCTA.classList.remove("is-hidden");
-                normalCTA.classList.add("is-hidden");
-                isFixedVisible = true;
-            }
-
-        },
-        {
-            root: null,
-            threshold: 0,
-            rootMargin: "-2px 0px -2px 0px" // 🔥 2px dead zone
-        }
-    );
-
-    observer.observe(anchor);
-});
 
