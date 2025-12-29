@@ -1166,9 +1166,9 @@ background-color: unset;
   border-radius:15px;
   z-index:0;
 }
-/* .prize_show_mobile{
+.prize_show_mobile{
   display: none;
-} */
+}
 /* ---------- Responsive ---------- */
 @media (max-width:768px){
  
@@ -3931,7 +3931,7 @@ bottom: 20px;
 /* ========== Reusable Components Area Css Ends Here ==========  */
 #collection_hero{
   position: relative;
-  height: 70vh;
+  height: 400px;
 }
 
 #collection_hero h1 p{
@@ -4551,8 +4551,13 @@ color: var(--primary);
 .dashj{
   display: none;
 }
+.prize_show_mobile{
+  display: unset;
+}
+
+
 }
 .collection_content{
-  height: 70vh;
+  height: 400px;
 }
 
