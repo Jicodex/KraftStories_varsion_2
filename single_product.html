@@ -23,13 +23,14 @@
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
-                <svg width="35" height="35" viewBox="0 0 24 24" aria-hidden="true" role="img" xmlns="http://www.w3.org/2000/svg">
-  <g fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round">
-    <path d="M3 6h18"></path>
-    <path d="M3 12h18"></path>
-    <path d="M3 18h18"></path>
-  </g>
-</svg>
+                <svg width="35" height="35" viewBox="0 0 24 24" aria-hidden="true" role="img"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <g fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round">
+                        <path d="M3 6h18"></path>
+                        <path d="M3 12h18"></path>
+                        <path d="M3 18h18"></path>
+                    </g>
+                </svg>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
@@ -46,8 +47,8 @@
                         <a class="nav-link" href="#">Contact</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#"><svg width="28" height="23" viewBox="0 0 22 17" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
+                        <a href="#" class="nav-link" id="cart_show"><svg width="28" height="23" viewBox="0 0 22 17"
+                                fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M5.8615 4.68921H19.6678C20.2443 4.68921 20.6648 5.23469 20.5181 5.7922L18.0501 15.1706C17.9484 15.5569 17.5992 15.8261 17.1998 15.8261H9.7432C9.35317 15.8261 9.00976 15.5691 8.8997 15.1949L4.87482 1.51037C4.76477 1.13618 4.42136 0.879227 4.03132 0.879227H0.879211"
                                     stroke="#28282C" stroke-width="1.75845" stroke-linecap="round" />
@@ -74,13 +75,147 @@
             </div>
         </div>
     </nav>
+
+
     <!-- ========== Navbar Area Ends Here ==========  -->
+    <!-- ========== Cart View Popup Start -->
+    <div class="cart_view_popup_warp">
+        <div class="main_cart_popup_box">
+            <div class="d-flex justify-content-between mb-4">
+                <div class="d-flex">
+                    <h4 class="h4_tag mb-0 align-self-center">Cart</h4>
+                    <span class="align-self-center text-muted ms-1">(1)</span>
+                </div>
+                <button id="cart_close">
+                    <img src="assets/img/icons/cart_close.svg" alt="icons">
+                </button>
+            </div>
+            <div class="list_box">
+                <!-- ========== Cart_box_items  Start-->
+                <div class="cart_items_card">
+                    <div class="row">
+                        <div class="col-3">
+                            <img class="w-100 productimg" src="assets/img/product_01.webp" alt="img">
+                        </div>
+                        <div class="col-9">
+                            <div class="d-flex justify-content-between">
+                                <div class="card_product_prize">
+                                    <h6>Glow Mist</h6>
+                                    <p>50ml / Sugar Glare</p>
+                                </div>
+                                <div class="prize">$76.00</div>
+                            </div>
+                            <div class="submit_and_countiti submit_and_countitii d-flex justify-content-between">
+                                <div class="count_number_for_product py-2">
+                                    <button type="button" id="decrease_qty">-</button>
+                                    <span id="quantity_value">1</span>
+                                    <button type="button" id="increase_qty">+</button>
+                                </div>
+                                <button class="product_delete"><img src="assets/img/icons/cart_close.svg"
+                                        alt="close"></button>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="cart_submit_popup">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="d-flex justify-content-between">
+                                    <h4 class="h4_tag">Subtotal</h4>
+                                    <h4 class="h4_tag">$76.00</h4>
+                                </div>
+                                <p>Shipping, taxes, and discount codes calculated at checkout.</p>
+                                <button href="#" class="simple_button" style="width: 100%;">Shop Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ========== Cart_box_items  End-->
+                <!-- ========== Cart_box_items  Start-->
+                <div class="cart_items_card">
+                    <div class="row">
+                        <div class="col-3">
+                            <img class="w-100 productimg" src="assets/img/product_01.webp" alt="img">
+                        </div>
+                        <div class="col-9">
+                            <div class="d-flex justify-content-between">
+                                <div class="card_product_prize">
+                                    <h6>Glow Mist</h6>
+                                    <p>50ml / Sugar Glare</p>
+                                </div>
+                                <div class="prize">$76.00</div>
+                            </div>
+                            <div class="submit_and_countiti submit_and_countitii d-flex justify-content-between">
+                                <div class="count_number_for_product py-2">
+                                    <button type="button" id="decrease_qty">-</button>
+                                    <span id="quantity_value">1</span>
+                                    <button type="button" id="increase_qty">+</button>
+                                </div>
+                                <button class="product_delete"><img src="assets/img/icons/cart_close.svg"
+                                        alt="close"></button>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="cart_submit_popup">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="d-flex justify-content-between">
+                                    <h4 class="h4_tag">Subtotal</h4>
+                                    <h4 class="h4_tag">$76.00</h4>
+                                </div>
+                                <p>Shipping, taxes, and discount codes calculated at checkout.</p>
+                                <button href="#" class="simple_button" style="width: 100%;">Shop Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ========== Cart_box_items  End-->
+
+            </div>
+
+
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const cartShowBtn = document.getElementById("cart_show");
+            const cartPopup = document.querySelector(".cart_view_popup_warp");
+            const cartCloseBtn = document.getElementById("cart_close");
+            const cartBox = document.querySelector(".main_cart_popup_box");
+
+            // show popup
+            cartShowBtn.addEventListener("click", function (e) {
+                e.preventDefault();
+                cartPopup.classList.add("active");
+            });
+
+            // close button
+            cartCloseBtn.addEventListener("click", function () {
+                cartPopup.classList.remove("active");
+            });
+
+            // click on overlay → close
+            cartPopup.addEventListener("click", function () {
+                cartPopup.classList.remove("active");
+            });
+
+            // stop closing when clicking inside popup box
+            cartBox.addEventListener("click", function (e) {
+                e.stopPropagation();
+            });
+
+        });
+    </script>
+    <!-- ========== Cart View Popup End -->
+
 
     <!-- ========== Single Product Section Starts Here ==========  -->
     <section id="single_product_section">
         <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-7">
+            <div class="row product_row product_layout">
+                <div class="col-lg-7 left_col left_top">
                     <div class="single_product_page_deteils not_desk_page_map_link">
                         <ul class="page_map_link animate bottom_to_top">
                             <li><a href="#">Home</a><img data-src="assets/img/icons/arrow_right_map_link.svg" alt="icon"
@@ -90,7 +225,7 @@
                             <li><a href="#">Single Product</a></li>
                         </ul>
                     </div>
-                    
+
                     <div class="signle_product_img_area">
                         <div class="single_product_view animate zoom_bounce">
                             <img data-src="assets/img/product_01.webp" alt="product" class="lazy">
@@ -101,8 +236,9 @@
                             <img data-src="assets/img/product_03.webp" alt="product" class="lazy">
                         </div>
                     </div>
+
                 </div>
-                <div class="col-lg-5">
+                <div class="col-lg-5 right_col">
                     <div class="single_product_page_deteils">
                         <ul class="page_map_link animate bottom_to_top not_for_mobile_page_map">
                             <li><a href="#">Home</a><img data-src="assets/img/icons/arrow_right_map_link.svg" alt="icon"
@@ -187,9 +323,7 @@
 
                     </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-7">
+                <div class="col-lg-7 left_col left_bottom">
                     <div class="jholok_custom_accordion">
 
                         <div class="jholok_accordion_item animate left_to_right open">
@@ -203,7 +337,12 @@
                                 </span>
                             </div>
                             <div class="jholok_accordion_body">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur venenatis augue ut mauris dapibus, sed ullamcorper sapien molestie. Praesent vel orci ultrices, hendrerit turpis in, finibus purus. Sed tincidunt lorem non massa porta, vel pretium lorem feugiat. Fusce id risus at ipsum varius vulputate quis vel justo. Integer convallis mauris vel augue volutpat, ut interdum lacus posuere. Integer convallis mauris vel augue volutpat, ut interdum lacus posuere.</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur venenatis augue ut
+                                    mauris dapibus, sed ullamcorper sapien molestie. Praesent vel orci ultrices,
+                                    hendrerit turpis in, finibus purus. Sed tincidunt lorem non massa porta, vel pretium
+                                    lorem feugiat. Fusce id risus at ipsum varius vulputate quis vel justo. Integer
+                                    convallis mauris vel augue volutpat, ut interdum lacus posuere. Integer convallis
+                                    mauris vel augue volutpat, ut interdum lacus posuere.</p>
                             </div>
                         </div>
 
@@ -268,192 +407,253 @@
                         </div>
 
                     </div>
-                </div>
-            </div>
+
+                    <!-- ==== Only Show Mobile  -->
 
 
-        </div>
-    </section>
-    <!-- ========== Single Product Section Ends Here ==========  -->
-
-    <!-- ========== Similar Product Area Starts Here ==========  -->
-     <section id="similar_product_section_area">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="similar_product_section_title text-center">
-                        <h1 class="animate-text zoom_bounce">Similar Product</h1>
+                    <div class="submit_and_countiti animate bottom_to_top prize_show_mobile prize_fixed">
+                        <div class="d-flex gap-2">
+                            <div class="count_number_for_product">
+                                <button type="button" id="decrease_qty">-</button>
+                                <span id="quantity_value">1</span>
+                                <button type="button" id="increase_qty">+</button>
+                            </div>
+                            <div class="submit_button_single_product">
+                                <button type="submit" class="slide_btn"><span>ADD TO BASKET</span></button>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div class="row g-4 product-wrapper mb-5">
-                <!-- -- Products Items Card Start -->
-                <div class="col-lg-4 col-md-6 col-sm-6 animate left_to_right product-item col-xl-3" data-category="shin_care">
-                    <a href="#" class="shop_product_card">
-                        <div class="product_img">
-                            <img data-src="assets/img/product_01.webp" alt="product" class="img_main lazy">
-                            <img data-src="assets/img/review_profile.webp" alt="product hover" class="img_hover lazy">
-                        </div>
 
-                        <div class="product_deteils">
-                            <div class="d-flex justify-content-between">
-                                <h4>Closed Bioactive Terrarium Kit</h4>
-                                <span>$ 139.00</span>
+                    <div class="submit_and_countiti animate bottom_to_top prize_show_mobile prize_normal">
+                        <div class="d-flex gap-2">
+                            <div class="count_number_for_product">
+                                <button type="button" id="decrease_qty">-</button>
+                                <span id="quantity_value">1</span>
+                                <button type="button" id="increase_qty">+</button>
                             </div>
-                            <p>DIY Craft</p>
-                        </div>
-                    </a>
-
-                </div>
-                <!-- -- Products Items Card End -->
-                <!-- -- Products Items Card Start -->
-                <div class="col-lg-4 col-md-6 col-sm-6 animate left_to_right product-item col-xl-3" data-category="hair_style">
-                    <a href="#" class="shop_product_card">
-                        <div class="product_img">
-                            <img data-src="assets/img/product_02.webp" alt="product" class="img_main lazy">
-                            <img data-src="assets/img/review_profile.webp" alt="product hover" class="img_hover lazy">
-                        </div>
-
-                        <div class="product_deteils">
-                            <div class="d-flex justify-content-between">
-                                <h4>Closed Bioactive Terrarium Kit</h4>
-                                <span>$ 139.00</span>
+                            <div class="submit_button_single_product">
+                                <button type="submit" class="slide_btn"><span>ADD TO BASKET</span></button>
                             </div>
-                            <p>DIY Craft</p>
                         </div>
-                    </a>
-
-                </div>
-                <!-- -- Products Items Card End -->
-                <!-- -- Products Items Card Start -->
-                <div class="col-lg-4 col-md-6 col-sm-6 animate left_to_right product-item col-xl-3" data-category="body_wash">
-                    <a href="#" class="shop_product_card">
-                        <div class="product_img">
-                            <img data-src="assets/img/product_03.webp" alt="product" class="img_main lazy">
-                            <img data-src="assets/img/review_profile.webp" alt="product hover" class="img_hover lazy">
-                        </div>
-
-                        <div class="product_deteils">
-                            <div class="d-flex justify-content-between">
-                                <h4>Closed Bioactive Terrarium Kit</h4>
-                                <span>$ 139.00</span>
-                            </div>
-                            <p>DIY Craft</p>
-                        </div>
-                    </a>
-
-                </div>
-                <!-- -- Products Items Card End -->
-                <!-- -- Products Items Card Start -->
-                <div class="col-lg-4 col-md-6 col-sm-6 animate left_to_right product-item col-xl-3" data-category="hair_style">
-                    <a href="#" class="shop_product_card">
-                        <div class="product_img">
-                            <img data-src="assets/img/product_01.webp" alt="product" class="img_main lazy">
-                            <img data-src="assets/img/review_profile.webp" alt="product hover" class="img_hover lazy">
-                        </div>
-
-                        <div class="product_deteils">
-                            <div class="d-flex justify-content-between">
-                                <h4>Closed Bioactive Terrarium Kit</h4>
-                                <span>$ 139.00</span>
-                            </div>
-                            <p>DIY Craft</p>
-                        </div>
-                    </a>
-
-                </div>
-                <!-- -- Products Items Card End -->
-            </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="text-center">
-                        <a href="#" id="load_more_product">Show more <img src="assets/img/icons/arrow_right_white.svg" alt="icons"></a>
                     </div>
+
                 </div>
             </div>
         </div>
-     </section>
-    <!-- ========== Similar Product Area Ends Here ==========  -->
+    </section>
 
+    <script>
+        document.querySelectorAll('.single_product_view').forEach(box => {
+            const img = box.querySelector('img');
 
-    <!-- ========== START: Footer Section ========== -->
-    <footer id="footer_area">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-4 col-md-12">
-                    <div class="footer_part_left animate bottom_to_top">
-                        <h4 class="notification fw-regular font-primary animate bottom_to_top">
-                            <svg width="10" height="10" viewBox="0 0 10 10" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <rect width="10" height="10" rx="5" fill="white"></rect>
-                            </svg>
-                            Making creativity accessible
-                        </h4>
-                        <h3 class="animate-text bottom_to_top" data-type="true" data-speed="0" data-delay="01s"
-                            data-duration="1s">Always Here for Our Guests</h3>
-                        <a href="#" class="btn-slide"
-                            style=" --bg:#ffffff; --text:#28282C; --circle:#101014; --arrow:#ffffff; --bg-h:#5b4df5; --text-h:#fff;--circle-h:#fff;--arrow-h:#5b4df5;--pt:20px; --pb:20px; --pl:22px; --pr:22px;">
-                            <div class="icon-wrap">
-                                <svg viewBox="0 0 24 24">
-                                    <path d="M5 12h14M13 5l6 7-6 7"></path>
-                                </svg>
+            box.addEventListener('mousemove', (e) => {
+                const rect = box.getBoundingClientRect();
+
+                const x = ((e.clientX - rect.left) / rect.width) * 100;
+                const y = ((e.clientY - rect.top) / rect.height) * 100;
+
+                img.style.transformOrigin = `${x}% ${y}%`;
+                img.style.transform = 'scale(1.8)';
+            });
+
+            box.addEventListener('mouseleave', () => {
+                img.style.transformOrigin = 'center center';
+                img.style.transform = 'scale(1)';
+            });
+        });
+    </script>
+    <div class="mobile_cta_anchor">
+        <!-- ========== Single Product Section Ends Here ==========  -->
+
+        <!-- ========== Similar Product Area Starts Here ==========  -->
+        <section id="similar_product_section_area">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="similar_product_section_title text-center">
+                            <h1 class="animate-text zoom_bounce">Similar Product</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="row g-4 product-wrapper mb-5">
+                    <!-- -- Products Items Card Start -->
+                    <div class="col-lg-4 col-md-6 col-sm-6 animate left_to_right product-item col-xl-3"
+                        data-category="shin_care">
+                        <a href="#" class="shop_product_card">
+                            <div class="product_img">
+                                <img data-src="assets/img/product_01.webp" alt="product" class="img_main lazy">
+                                <img data-src="assets/img/review_profile.webp" alt="product hover"
+                                    class="img_hover lazy">
                             </div>
-                            <span>Reserve Now</span>
+
+                            <div class="product_deteils">
+                                <div class="d-flex justify-content-between">
+                                    <h4>Closed Bioactive Terrarium Kit</h4>
+                                    <span>$ 139.00</span>
+                                </div>
+                                <p>DIY Craft</p>
+                            </div>
                         </a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-1 fotter_rxtra_col"></div>
-                <div class="col-lg-2 col-sm-6 col-12 order-1 order-lg-0 order-md-0">
-                    <div class="footer_center animate bottom_to_top">
-                        <span>Menu</span>
-                        <ul>
-                            <li><a href="#">About</a></li>
-                            <li><a href="#">Gallery</a></li>
-                            <li><a href="#">Features</a></li>
-                            <li><a href="#">Reviews</a></li>
-                            <li><a href="#">Pricing</a></li>
-                            <li><a href="#">Location</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-sm-6 col-12 order-0 order-lg-1 order-md-1">
-                    <div class="row">
-                        <div class="footer_center animate bottom_to_top col-lg-12 col-md-12 col-5">
-                            <span>Explore</span>
-                            <ul>
-                                <li><a href="#">Templates</a></li>
-                                <li><a href="#">NutsDev</a></li>
-                            </ul>
-                        </div>
-                        <div class="footer_center animate bottom_to_top col-lg-12 col-md-12 col-7" data-delay=".3s">
-                            <span>Contact</span>
-                            <ul>
-                                <li><a href="#">help@scyscape.com</a></li>
-                                <li><a href="#">+1 (212) 555-0199</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="copyright_text">
-                        <p>© Stayscape, 2025</p>
-                        <p class="back_to_top">Back to Top</p>
-                    </div>
-                    <div class="footer_last_img pb-5 pt-3">
-                        <img data-src="assets/img/footer_bottom.webp" alt="img" class="lazy animate zoom_bounce">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <!-- ========== END: Footer Section ========== -->
 
+                    </div>
+                    <!-- -- Products Items Card End -->
+                    <!-- -- Products Items Card Start -->
+                    <div class="col-lg-4 col-md-6 col-sm-6 animate left_to_right product-item col-xl-3"
+                        data-category="hair_style">
+                        <a href="#" class="shop_product_card">
+                            <div class="product_img">
+                                <img data-src="assets/img/product_02.webp" alt="product" class="img_main lazy">
+                                <img data-src="assets/img/review_profile.webp" alt="product hover"
+                                    class="img_hover lazy">
+                            </div>
+
+                            <div class="product_deteils">
+                                <div class="d-flex justify-content-between">
+                                    <h4>Closed Bioactive Terrarium Kit</h4>
+                                    <span>$ 139.00</span>
+                                </div>
+                                <p>DIY Craft</p>
+                            </div>
+                        </a>
+
+                    </div>
+                    <!-- -- Products Items Card End -->
+                    <!-- -- Products Items Card Start -->
+                    <div class="col-lg-4 col-md-6 col-sm-6 animate left_to_right product-item col-xl-3"
+                        data-category="body_wash">
+                        <a href="#" class="shop_product_card">
+                            <div class="product_img">
+                                <img data-src="assets/img/product_03.webp" alt="product" class="img_main lazy">
+                                <img data-src="assets/img/review_profile.webp" alt="product hover"
+                                    class="img_hover lazy">
+                            </div>
+
+                            <div class="product_deteils">
+                                <div class="d-flex justify-content-between">
+                                    <h4>Closed Bioactive Terrarium Kit</h4>
+                                    <span>$ 139.00</span>
+                                </div>
+                                <p>DIY Craft</p>
+                            </div>
+                        </a>
+
+                    </div>
+                    <!-- -- Products Items Card End -->
+                    <!-- -- Products Items Card Start -->
+                    <div class="col-lg-4 col-md-6 col-sm-6 animate left_to_right product-item col-xl-3"
+                        data-category="hair_style">
+                        <a href="#" class="shop_product_card">
+                            <div class="product_img">
+                                <img data-src="assets/img/product_01.webp" alt="product" class="img_main lazy">
+                                <img data-src="assets/img/review_profile.webp" alt="product hover"
+                                    class="img_hover lazy">
+                            </div>
+
+                            <div class="product_deteils">
+                                <div class="d-flex justify-content-between">
+                                    <h4>Closed Bioactive Terrarium Kit</h4>
+                                    <span>$ 139.00</span>
+                                </div>
+                                <p>DIY Craft</p>
+                            </div>
+                        </a>
+
+                    </div>
+                    <!-- -- Products Items Card End -->
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="text-center">
+                            <a href="#" id="load_more_product">Show more <img
+                                    src="assets/img/icons/arrow_right_white.svg" alt="icons"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== Similar Product Area Ends Here ==========  -->
+
+
+        <!-- ========== START: Footer Section ========== -->
+        <footer id="footer_area">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-4 col-md-12">
+                        <div class="footer_part_left animate bottom_to_top">
+                            <h4 class="notification fw-regular font-primary animate bottom_to_top">
+                                <svg width="10" height="10" viewBox="0 0 10 10" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="10" height="10" rx="5" fill="white"></rect>
+                                </svg>
+                                Making creativity accessible
+                            </h4>
+                            <h3 class="animate-text bottom_to_top" data-type="true" data-speed="0" data-delay="01s"
+                                data-duration="1s">Always Here for Our Guests</h3>
+                            <a href="#" class="btn-slide"
+                                style=" --bg:#ffffff; --text:#28282C; --circle:#101014; --arrow:#ffffff; --bg-h:#5b4df5; --text-h:#fff;--circle-h:#fff;--arrow-h:#5b4df5;--pt:20px; --pb:20px; --pl:22px; --pr:22px;">
+                                <div class="icon-wrap">
+                                    <svg viewBox="0 0 24 24">
+                                        <path d="M5 12h14M13 5l6 7-6 7"></path>
+                                    </svg>
+                                </div>
+                                <span>Reserve Now</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-1 fotter_rxtra_col"></div>
+                    <div class="col-lg-2 col-sm-6 col-12 order-1 order-lg-0 order-md-0">
+                        <div class="footer_center animate bottom_to_top">
+                            <span>Menu</span>
+                            <ul>
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Gallery</a></li>
+                                <li><a href="#">Features</a></li>
+                                <li><a href="#">Reviews</a></li>
+                                <li><a href="#">Pricing</a></li>
+                                <li><a href="#">Location</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-sm-6 col-12 order-0 order-lg-1 order-md-1">
+                        <div class="row">
+                            <div class="footer_center animate bottom_to_top col-lg-12 col-md-12 col-5">
+                                <span>Explore</span>
+                                <ul>
+                                    <li><a href="#">Templates</a></li>
+                                    <li><a href="#">NutsDev</a></li>
+                                </ul>
+                            </div>
+                            <div class="footer_center animate bottom_to_top col-lg-12 col-md-12 col-7" data-delay=".3s">
+                                <span>Contact</span>
+                                <ul>
+                                    <li><a href="#">help@scyscape.com</a></li>
+                                    <li><a href="#">+1 (212) 555-0199</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="copyright_text">
+                            <p>© Stayscape, 2025</p>
+                            <p class="back_to_top">Back to Top</p>
+                        </div>
+                        <div class="footer_last_img pb-5 pt-3">
+                            <img data-src="assets/img/footer_bottom.webp" alt="img" class="lazy animate zoom_bounce">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- ========== END: Footer Section ========== -->
+    </div>
     <!-- ========== All JS Link  -->
     <script src="assets/js/jquery-1.12.4.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/script.js"></script>
+
 </body>
 
 </html>

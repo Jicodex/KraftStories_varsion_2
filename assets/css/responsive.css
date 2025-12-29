@@ -15,7 +15,7 @@
   --size28: 28px;
   --size32: 28px;
   --size42: 40px;
-  --size50: 50px;
+  --size50: 40px;
   --size51: 32px;
   --size52: 52px;
   --size58: 40px;
@@ -531,7 +531,126 @@ a.team_link:hover .team_item h2 {
 	letter-spacing: -0.1%;
 	padding: 7px;
 }
-
+.faq_title_section h4 {
+	width: 100%;
+}
+.section_title_main {
+	padding-left: 0px;
+	padding-right: 0px;
+}
+#collection_hero {
+	height: 350px;
+}
+.hero_positon_center_yh{
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
+.section_title_name {
+	font-weight: var(--fw500);
+	font-size: var(--size50);
+	line-height: 60px;
+	letter-spacing: -0.8%;
+	color: var(--primary);
+	border-bottom: 1px solid #101014;
+	padding-bottom: 5px;
+	margin-top: 5px;
+}
+.creative_jour_card .creative_img_card_warp {
+	height: 388px;
+}
+.gift-circle-section {
+	margin-top: 0px;
+}
+.rotating-circle {
+	top: 0%;
+}
+.circle-center-content {
+	top: 70%;
+}
+.circle-center-content p {
+	width: 100%;
+}
+.h1_text {
+	line-height: 50px;
+}
+#gift_area_section {
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+.rotating-circle img {
+	border-radius: 6.05px;
+}
+.section_title_name {
+	line-height: 45px;
+}
+.section_title_bottom_border {
+	padding-bottom: 0px;
+	flex-wrap: wrap !important;
+}
+.title_bio {
+	width: 100%;
+}
+.review_slider_items_card {
+	flex-direction: column;
+	align-items: center;
+	gap: 30px;
+}
+.review_slider_items_card img {
+	width: 100%;
+	max-width: 100%;
+}
+.reviews_content_area p {
+	margin-bottom: 15px;
+	margin-top: 15px;
+	max-width: 100%;
+}
+.next_pre_button_for_reviews {
+	position: absolute;
+	right: 50%;
+	bottom: -90px;
+	transform: translateX(50%);
+	display: flex;
+	gap: 10px;
+}
+.next_pre_button_for_reviews button {
+	margin-left: 0px;
+}
+#reviews_section {
+	padding-top: 30px;
+}
+.collection_hero_btn{
+	display: grid !important;
+	justify-content: center;
+}
+.simple_button {
+	margin: 0 auto;
+}
+#creative_jour_section {
+	padding: 40px 0;
+}
+.rotating-circle img {
+	width: 88px;
+	height: 80px;
+}
+#single_product_section {
+	padding-top: 0px;
+}
+.main_cart_popup_box {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: #fff;
+	right: 0;
+	padding: 44px 24px 70px 24px;
+	transform: translate(100%);
+	transition: all .3s linear;
+	z-index: 999999999999999999999999 !important;
+}
+.submit_and_countiti{
+	
+}
+/* ==== 300px */
 }
 
 /* ======================================
@@ -554,6 +673,9 @@ a.team_link:hover .team_item h2 {
 }
 .not_desk_page_map_link{
 	display: flex;
+}
+.faq_title_section h4 {
+	width: 100%;
 }
 .sm_form_center{
   margin: 0 auto;
@@ -806,10 +928,30 @@ a.team_link:hover .team_item h2 {
 .single_product_page_deteils{
 	margin-top: 30px;
 }
-
-
+.hero_positon_center_yh {
+	top: 50%;
+	position: absolute;
+	transform: translateY(-50%);
 }
-
+.creative_jour_card .creative_img_card_warp {
+	height: 388px;
+}
+.gift-circle-section {
+	position: relative;
+	width: 100%;
+	height: 70vw;
+	max-height: 800px;
+	margin-top: 100px;
+}
+.creative_three_collum .creative_img_card_warp {
+	height: 216px !important;
+}
+.right_col .single_product_page_deteils {
+        position: static !important;
+        top: auto !important;
+    }
+}
+/* ==== 700px  */
 /* ======================================
    3) 992px – 1024px
 ====================================== */
@@ -855,6 +997,10 @@ a.team_link:hover .team_item h2 {
 #footer_area .col-lg-4.fotter_rxtra_col{
   display: none;
 }
+.right_col .single_product_page_deteils {
+        position: static !important;
+        top: auto !important;
+    }
 
 }
 
@@ -884,6 +1030,11 @@ a.team_link:hover .team_item h2 {
 a.team_link:hover .team_item h2 {
 	bottom: 60px;
 }
+
+.right_col .single_product_page_deteils {
+        position: static !important;
+        top: auto !important;
+    }
 }
 
 /* ======================================
@@ -891,6 +1042,11 @@ a.team_link:hover .team_item h2 {
 ====================================== */
 @media (min-width: 1301px) {
   /* Your CSS Here */
+
+  .right_col .single_product_page_deteils {
+        position: static !important;
+        top: auto !important;
+    }
 }
 
 
@@ -914,6 +1070,10 @@ a.team_link:hover .team_item h2 {
     --notification-size: 12px;
     --button-size: 14px;
   }
+  .right_col .single_product_page_deteils {
+        position: static !important;
+        top: auto !important;
+    }
 }
 
 /* Mobile (up to 767px) */

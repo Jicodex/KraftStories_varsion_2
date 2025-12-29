@@ -1,3 +1,4 @@
+
 // ======== Listing Page Revies Count Down Start 
 document.addEventListener("DOMContentLoaded", () => {
     const counters = document.querySelectorAll(".count");
@@ -445,21 +446,36 @@ thumbnails.forEach(thumb => {
 
 
 // ===== Single Product Form 
-// Quantity
-const qtySpan = document.getElementById('quantity_value');
-const qtyInput = document.getElementById('product_quantity');
-document.getElementById('increase_qty').addEventListener('click', () => {
-    let qty = parseInt(qtySpan.textContent);
-    qty++;
-    qtySpan.textContent = qty;
-    qtyInput.value = qty;
-});
+document.addEventListener("click", function (e) {
 
-document.getElementById('decrease_qty').addEventListener('click', () => {
-    let qty = parseInt(qtySpan.textContent);
-    if (qty > 1) qty--; // prevent <1
-    qtySpan.textContent = qty;
-    qtyInput.value = qty;
+    // INCREASE
+    const increaseBtn = e.target.closest("#increase_qty");
+    if (increaseBtn) {
+        const box = increaseBtn.closest(".count_number_for_product");
+        const qtySpan = box.querySelector("#quantity_value");
+        const qtyInput = box.querySelector("#product_quantity");
+
+        let qty = parseInt(qtySpan.textContent);
+        qty++;
+
+        qtySpan.textContent = qty;
+        if (qtyInput) qtyInput.value = qty;
+    }
+
+    // DECREASE
+    const decreaseBtn = e.target.closest("#decrease_qty");
+    if (decreaseBtn) {
+        const box = decreaseBtn.closest(".count_number_for_product");
+        const qtySpan = box.querySelector("#quantity_value");
+        const qtyInput = box.querySelector("#product_quantity");
+
+        let qty = parseInt(qtySpan.textContent);
+        if (qty > 1) qty--;
+
+        qtySpan.textContent = qty;
+        if (qtyInput) qtyInput.value = qty;
+    }
+
 });
 
 // Size Selection
@@ -525,5 +541,33 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 // ======== about page mision vision silder 
+document.addEventListener("DOMContentLoaded", function () {
 
+    if (window.innerWidth > 991) return;
+
+    const fixedCTA = document.querySelector(".prize_fixed");
+    const normalCTA = document.querySelector(".prize_normal");
+    const anchor = document.querySelector(".mobile_cta_anchor");
+
+    if (!fixedCTA || !normalCTA || !anchor) return;
+
+    const observer = new IntersectionObserver(
+        ([entry]) => {
+            if (entry.isIntersecting) {
+                fixedCTA.classList.add("is-hidden");
+                normalCTA.classList.remove("is-hidden");
+            } else {
+                fixedCTA.classList.remove("is-hidden");
+                normalCTA.classList.add("is-hidden");
+            }
+        },
+        {
+            root: null,
+            threshold: 0
+        }
+    );
+
+    observer.observe(anchor);
+
+});
 
